@@ -15,8 +15,17 @@ window.onload = function () {
 
     //pedirle que inserte antes de un elemento
 
-    var parrafo=document.body.getElementsByTagName("h1");
-    document.insertBefore(parrafo[2],parrafo[0])
-    document.insertBefore(any,parrafo[2]);
+    // var parrafo=document.body.getElementsByTagName("h1");
+    // document.insertBefore(parrafo[2],parrafo[0])
+    // document.insertBefore()
+
+    //pedirle que inserte antes de un elemento
+    var menu = document.getElementById('menu');
+    //crear un nuevo nodo li
+    
+
+
+
+
 }
 
