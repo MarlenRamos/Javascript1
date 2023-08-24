@@ -1,7 +1,10 @@
 const totalIngresos=() =>{
     var totalIngreso=0;
-    for (let ingreso in ingresos){
-        totalIngreso=totalIngreso+ingresos[ingreso];
+    var totalElementoValor=document.getElementsByClassName("elemento_valor");
+    //for (let ingreso in ingresos)
+    for (ingreso =0; ingreso<totalElementoValor.length; ingreso++)
+    {
+        totalIngreso=totalIngreso+parseFloat (totalElementoValor[ingreso].innerHTML);
     }
     return totalIngreso;
 };
@@ -16,6 +19,7 @@ const totalEgresos=() =>{
     for (let egreso in egresos){
         totalEgreso=totalEgreso+egresos[egreso];
     }
+    //document.getElementById("Ingreso")
     return totalEgreso;
 };
 
