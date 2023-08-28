@@ -16,13 +16,13 @@
 
             <div class="presupuesto_titulo">Presupuesto disponible</div>
 
-            <div class="presupuesto_valor">2,000.00</div>
+            <div class="presupuesto_valor" id="presupuestoTotal">0.00</div>
 
             <div class="presupuesto_ingreso limpiarEstilos">
                 <div class="presupuesto_ingreso--texto">Ingresos</div>
                 <div class="derecha">
-                    <div class="presupuesto_ingreso—valor">+4,000.00</div>
-                    <div class="presupuesto_ingreso--porcentaje"> </div>
+                    <div class="presupuesto_ingreso—valor" id="presupuesto_ingreso--valor">0.00</div>
+                    <div class="presupuesto_ingreso--porcentaje" id="presupuesto_ingreso--porcentaje"> </div>
                 </div>
     
             </div>
@@ -30,9 +30,9 @@
             <div class="presupuesto_egreso limpiarEstilos">
                 <div class="presupuesto_egreso--texto">Egresos</div>
                 <div class="derecha limpiarEstilos">
-                    <div class="presupuesto_egreso--valor">–1,900.00</div> 
+                    <div class="presupuesto_egreso--valor" id="presupuesto_egreso--valor">0.00</div> 
                     <!-- quitar valor y poner id  -->
-                    <div class="presupuesto_egreso--porcentaje">45%</div>
+                    <div class="presupuesto_egreso--porcentaje" id="presupuesto_egreso--porcentaje"></div>
                 </div>
             </div>
     
@@ -41,9 +41,7 @@
     </div>
     
     
-    
-
-    
+    <!-- Para agregar ingresos o egresos     -->
     <form action="" id="forma">
 
         <div class="agregar">
@@ -52,9 +50,9 @@
                     <option value="ingreso">+</option>
                     <option value="egreso">-</option>
                 </select>
-                <input type="text" class="agregar_descripcion" id="descripcion" value="Agregar descripción" >
-                <input type="number" class="agregar_valor" placeholder="valor" step="any">
-                <button class="agregar_btn" id="agregar_btn"> 
+                <input type="text" class="agregar_descripcion" id="descripcion" placeholder="Agregar descripción" >
+                <input type="number" class="agregar_valor" placeholder="valor" step="any" id="valor">
+                <button type="button" class="agregar_btn" id="agregar_btn"> 
                     <ion-icon name="checkmark-circle-outline"></ion-icon>
                 </button>
             </div>
@@ -62,68 +60,22 @@
 
     </form>
     
-
+    <!-- contenedor ingresos  -->
     
     <div class="contenedor limpiaEstilos">
         <div class="ingreso">
             <h2 class="ingreso_titulo">Ingresos</h2>
-            <div id="lista-ingresos:">
-                <!-- <div class="elemento limpiarEstilos">
-                    <div class="elemento_descripcion">Salario</div>
-                    <div class="derecha limpiarEstilos">
-                        <div class="elemento_valor">+2,200.00</div>
-                        <div class="elemento_eliminar">
-                            <button class="elemento_eliminar--btn">
-                                <ion-icon name="close-circle-outline"></ion-icon>
-                            </button>
-                        </div>
-    
-                    </div>
-                </div>
-    
-                <div class="elemento limpiarEstilos">
-                    <div class="elemento_descripcion">Venta Coche</div>
-                    <div class="derecha limpiarEstilos">
-                        <div class="elemento_valor">+1,500.00</div>
-                        <div class="elemento_eliminar">
-                            <button class="elemento_eliminar--btn">
-                                <ion-icon name="close-circle-outline"></ion-icon>
-                            </button>
-                        </div>
-                    </div>
-                </div> -->
+            <div id="lista-ingresos">
     
             </div>
         </div>
     
+        <!-- contenedor egresos  -->
+
         <div class="egreso">
             <h2 class="egreso_titulo">Egresos</h2>
             <div id="lista-egresos">
-                <div class="elemento limpiarEstilos">
-                    <div class="elemento_descripcion">Renta departamento</div>
-                    <div class="derecha limpiarEstilos">
-                        <div class="elemento_valor">-900.00</div>
-                        <div class="elemento_porcentaje">21 %</div>
-                        <div class="elemento_eliminar">
-                            <button class="elemento_eliminar--btn">
-                                <ion-icon name="close-circle-outline"></ion-icon>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-    
-                <div class="elemento limpiarEstilos">
-                    <div class="elemento_descripcion">Ropa</div>
-                    <div class="derecha limpiarEstilos">
-                        <div class="elemento_valor">-400.00</div>
-                        <div class="elemento_porcentaje">9 %</div>
-                        <div class="elemento_eliminar">
-                            <button class="elemento_eliminar--btn">
-                                <ion-icon name="close-circle-outline"></ion-icon>
-                            </button>
-                        </div>
-                    </div>
-                </div>
+                
             </div>
         </div>
     
@@ -133,6 +85,10 @@
     
     <script type="module" src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.esm.js"> </script>
     <script src="./js/app.js"></script>
+    <script src="./js/Egreso.js"></script>
+    <script src="./js/Ingreso.js"></script>
+    <script src="./js/Dato.js"></script>
+    
 
 </body>
 
